@@ -1,0 +1,31 @@
+" ------ various proxy settings -----
+
+
+** Apt **
+[ /etc/apt/apt.conf.d/proxy.conf, /etc/apt/apt.conf ] 
+
+Acquire {
+    HTTP::proxy "http://user:pass@proxy:port";
+    HTTPS::proxy "http://user:pass@proxy:port";
+}
+
+(http://bit.ly/36u7129, http://bit.ly/2GkKkCW)
+
+
+** Wget **
+[ /etc/wgetrc, ~/.wgetrc ]
+
+http_proxy = http://user:pass@proxy:port
+https_proxy = http://user:pass@proxy:port
+ftp_proxy = http://user:pass@proxy:port
+
+(http://bit.ly/30YfedZ)
+
+
+** Git **
+# git config --global http.proxy http://user:pass@proxy:port
+# git config --global https.proxy http://user:pass@proxy:port
+
+(http://bit.ly/2uvK6GJ)
+
+
